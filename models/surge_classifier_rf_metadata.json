@@ -1,0 +1,124 @@
+{
+  "model_type": "RandomForestClassifier (Spark ML)",
+  "spark_native_saved": true,
+  "dataset": "noeyislearning/weekly-hospital-respiratory-data-and-metrics (RSV Admissions branch)",
+  "feature_cols": [
+    "lag_1",
+    "lag_2",
+    "rolling_mean_4w",
+    "bed_occ_ratio_lag1",
+    "week_of_year",
+    "state_idx"
+  ],
+  "state_labels": [
+    "PA",
+    "AZ",
+    "CA",
+    "OH",
+    "IL",
+    "NY",
+    "WA",
+    "CT",
+    "ID",
+    "IN",
+    "KS",
+    "LA",
+    "OK",
+    "DE",
+    "MI",
+    "IA",
+    "OR",
+    "UT",
+    "KY",
+    "CO",
+    "RI",
+    "AR",
+    "NH",
+    "AK",
+    "ME",
+    "NE",
+    "TX",
+    "GA",
+    "FL",
+    "HI",
+    "MD",
+    "MO",
+    "WY",
+    "AL",
+    "MS",
+    "NM",
+    "NC",
+    "VA",
+    "MN",
+    "SC",
+    "SD",
+    "TN",
+    "NJ",
+    "VT",
+    "WI",
+    "MA",
+    "ND",
+    "NV",
+    "DC",
+    "MT",
+    "WV"
+  ],
+  "feature_importance_rank": [
+    {
+      "rank": 1,
+      "feature": "week_of_year",
+      "importance": 0.32297862321392456
+    },
+    {
+      "rank": 2,
+      "feature": "state_idx",
+      "importance": 0.2918092857617487
+    },
+    {
+      "rank": 3,
+      "feature": "bed_occ_ratio_lag1",
+      "importance": 0.12245703324620899
+    },
+    {
+      "rank": 4,
+      "feature": "lag_1",
+      "importance": 0.11293616887833302
+    },
+    {
+      "rank": 5,
+      "feature": "rolling_mean_4w",
+      "importance": 0.07894001062657359
+    },
+    {
+      "rank": 6,
+      "feature": "lag_2",
+      "importance": 0.07087887827321111
+    }
+  ],
+  "target": "Total RSV Admissions",
+  "label": "spike_label (1 = top 30% kenaikan mingguan RSV Admissions)",
+  "spike_threshold_pct_change": 0.25,
+  "hyperparameters": {
+    "maxDepth": 8,
+    "numTrees": 100,
+    "maxBins": 64,
+    "seed": 42
+  },
+  "tuning_rounds_used": 1,
+  "validation_metrics": {
+    "accuracy": 0.7244094488188977,
+    "precision": 0.5897435897435898,
+    "recall": 0.5476190476190477,
+    "f1": 0.7216954335428688
+  },
+  "test_metrics": {
+    "accuracy": 0.7735849056603774,
+    "precision": 0.3333333333333333,
+    "recall": 0.5,
+    "f1": 0.7909609477841159
+  },
+  "target_accuracy_range": [
+    0.7,
+    0.8
+  ]
+}
